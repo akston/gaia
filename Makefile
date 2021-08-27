@@ -8,7 +8,7 @@ TEST_TIMEOUT_ACC?=20m
 TEST_TIMEOUT?=50s
 # Set the build dir, where built cross-compiled binaries will be output
 BUILDDIR := bin
-BINARIES="linux/amd64 linux/arm darwin/amd64 windows/amd64"
+BINARIES="linux/arm64"
 
 default: dev
 
