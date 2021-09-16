@@ -5,7 +5,7 @@
 *.dylib
 *.db
 rice-box.go
-gaia-linux-amd64
+gaia-linux-*
 
 # Test binary, build with `go test -c`
 *.test

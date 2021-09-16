@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 # Start gaia
-exec /app/gaia-linux-amd64
+exec /app/gaia-linux-arm64

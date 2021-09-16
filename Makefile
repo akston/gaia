@@ -32,7 +32,7 @@ static_assets:
 	rice embed-go
 
 compile_backend:
-	env GOOS=linux GOARCH=amd64 go build -ldflags $(GO_LDFLAGS_STATIC) -o $(NAME)-linux-amd64 ./cmd/gaia/main.go
+	env GOOS=linux GOARCH=arm64 go build -ldflags $(GO_LDFLAGS_STATIC) -o $(NAME)-linux-arm64 ./cmd/gaia/main.go
 
 binaries:
 	CGO_ENABLED=0 gox \

@@ -1,18 +1,18 @@
 FROM golang:1.14.4-alpine
 
 # Version and other variables which can be changed.
-ENV GAIA_PORT=8080 \
+ENV GAIA_PORT=8181 \
     GAIA_HOME_PATH=/data
 
 # Directory for the binary
 WORKDIR /app
 
 # Copy gaia binary into docker image
-COPY bin/linux/arm64/gaia /app
+COPY gaia-linux-arm64 /app
 
 # Fix permissions & setup known hosts file for ssh agent.
 # Install git.
-RUN chmod +x ./gaia \
+RUN chmod +x ./gaia-linux-arm64 \
     && apk add --no-cache git \
     && mkdir -p /root/.ssh \
     && touch /root/.ssh/known_hosts \
@@ -22,7 +22,7 @@ RUN chmod +x ./gaia \
 VOLUME [ "${GAIA_HOME_PATH}" ]
 
 # Expose port
-EXPOSE ${GAIA_PORT}
+EXPOSE ${GAIA_PORT} 8989
 
 # Copy entry point script
 COPY docker/docker-entrypoint.sh /usr/local/bin/

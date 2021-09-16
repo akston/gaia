@@ -2,7 +2,7 @@ module github.com/gaia-pipeline/gaia
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
-	github.com/GeertJohan/go.rice v1.0.0
+	github.com/GeertJohan/go.rice v1.0.2
 	github.com/Microsoft/go-winio v0.4.14 // indirect
 	github.com/Pallinder/go-randomdata v1.1.0
 	github.com/alcortesm/tgz v0.0.0-20161220082320-9c5fe88206d7 // indirect
